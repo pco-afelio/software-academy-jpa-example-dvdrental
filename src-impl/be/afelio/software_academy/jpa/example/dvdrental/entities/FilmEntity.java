@@ -4,13 +4,15 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
-import javax.persistence.Transient;
 
 import be.afelio.software_academy.jpa.example.dvdrental.beans.Film;
 
@@ -19,7 +21,13 @@ import be.afelio.software_academy.jpa.example.dvdrental.beans.Film;
 @NamedQueries({
 	@NamedQuery(
 			name="countFilmsByLanguageName", 
-			query="select count(f) from Film f where f.version.name = ?1")
+			query="select count(f) from Film f where f.version.name = ?1"),
+	@NamedQuery(
+			name="findOneFilmByTitleLazy",
+			query="select f from Film f where f.title = ?1"),
+	@NamedQuery(
+			name="findOneFilmByTitleEager",
+			query="select f from Film f join fetch f.actors where f.title = ?1")
 })
 public class FilmEntity extends Film {
 
@@ -36,7 +44,11 @@ public class FilmEntity extends Film {
 	@JoinColumn(name="language_id")
 	private LanguageEntity version;
 	
-	@Transient
+	// @Transient
+	@ManyToMany(fetch=FetchType.LAZY)
+	@JoinTable(name="film_actor", 
+			joinColumns=@JoinColumn(name="film_id"),
+			inverseJoinColumns=@JoinColumn(name="actor_id"))
 	private List<ActorEntity> actors;
 	
 	public String getTitle() {

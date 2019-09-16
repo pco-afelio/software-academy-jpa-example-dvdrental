@@ -10,6 +10,8 @@
 		<class>be.afelio.software_academy.jpa.example.dvdrental.entities.ActorEntity</class>
 		<class>be.afelio.software_academy.jpa.example.dvdrental.entities.LanguageEntity</class>
 		<class>be.afelio.software_academy.jpa.example.dvdrental.entities.FilmEntity</class>
+		<class>be.afelio.software_academy.jpa.example.dvdrental.entities.StaffEntity</class>
+		<class>be.afelio.software_academy.jpa.example.dvdrental.entities.CategoryEntity</class>
 		
 		<properties>
 			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost/dvdrental"/>

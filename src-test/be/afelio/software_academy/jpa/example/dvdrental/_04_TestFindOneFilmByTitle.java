@@ -23,6 +23,8 @@ class _04_TestFindOneFilmByTitle {
 
 		assertEquals(expected, actual);
 
+		System.out.println("--------------------");
+		
 		List<? extends Actor> list = actual.getActors();
 		assertNotNull(list);
 		list.sort(comparator);
