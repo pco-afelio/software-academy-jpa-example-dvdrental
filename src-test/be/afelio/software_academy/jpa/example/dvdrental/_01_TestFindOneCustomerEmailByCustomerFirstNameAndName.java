@@ -11,41 +11,41 @@ class _01_TestFindOneCustomerEmailByCustomerFirstNameAndName {
 
 	@Test
 	void testExistingCustomer() {
-		DvdRentalJpaRepository repository = Factory.createDvdRentalJdbcRepository();
+		DvdRentalJpaRepository repository = Factory.createDvdRentalJpaRepository();
 		assertNotNull(repository);
 
 		Customer expected = createJaredEly();
-		Customer actual = repository.findOneCustomerEmailByCustomerFirstNameAndName("Jared", "Ely");
+		Customer actual = repository.findOneCustomerByCustomerFirstNameAndName("Jared", "Ely");
 
-		assertEquals(expected, actual);
+		assertEquals(expected, actual); // assertTrue(expected.equals(actual))
 	}
 
 	@Test
 	void testNonExistingCustomer() {
-		DvdRentalJpaRepository repository = Factory.createDvdRentalJdbcRepository();
+		DvdRentalJpaRepository repository = Factory.createDvdRentalJpaRepository();
 		assertNotNull(repository);
 
-		Customer actual = repository.findOneCustomerEmailByCustomerFirstNameAndName("xxx", "yyy");
+		Customer actual = repository.findOneCustomerByCustomerFirstNameAndName("xxx", "yyy");
 
 		assertNull(actual);
 	}
 
 	@Test
 	void testNonExistingCustomerFirstNameNull() {
-		DvdRentalJpaRepository repository = Factory.createDvdRentalJdbcRepository();
+		DvdRentalJpaRepository repository = Factory.createDvdRentalJpaRepository();
 		assertNotNull(repository);
 
-		Customer actual = repository.findOneCustomerEmailByCustomerFirstNameAndName(null, "Ely");
+		Customer actual = repository.findOneCustomerByCustomerFirstNameAndName(null, "Ely");
 
 		assertNull(actual);
 	}
 
 	@Test
 	void testNonExistingCustomerNameNull() {
-		DvdRentalJpaRepository repository = Factory.createDvdRentalJdbcRepository();
+		DvdRentalJpaRepository repository = Factory.createDvdRentalJpaRepository();
 		assertNotNull(repository);
 
-		Customer actual = repository.findOneCustomerEmailByCustomerFirstNameAndName("Jared", null);
+		Customer actual = repository.findOneCustomerByCustomerFirstNameAndName("Jared", null);
 
 		assertNull(actual);
 	}

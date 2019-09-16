@@ -13,7 +13,7 @@ class _04_TestFindOneFilmByTitle {
 
 	@Test
 	void testExistingTitle() {
-		DvdRentalJpaRepository repository = Factory.createDvdRentalJdbcRepository();
+		DvdRentalJpaRepository repository = Factory.createDvdRentalJpaRepository();
 		assertNotNull(repository);
 
 		Film expected = createTestFilm("Bright Encounters",
@@ -31,7 +31,7 @@ class _04_TestFindOneFilmByTitle {
 
 	@Test
 	void testNonExistingTitle() {
-		DvdRentalJpaRepository repository = Factory.createDvdRentalJdbcRepository();
+		DvdRentalJpaRepository repository = Factory.createDvdRentalJpaRepository();
 		assertNotNull(repository);
 
 		Film actual = repository.findOneFilmByTitle("xxx");
@@ -40,7 +40,7 @@ class _04_TestFindOneFilmByTitle {
 
 	@Test
 	void testNullTitle() {
-		DvdRentalJpaRepository repository = Factory.createDvdRentalJdbcRepository();
+		DvdRentalJpaRepository repository = Factory.createDvdRentalJpaRepository();
 		assertNotNull(repository);
 
 		Film actual = repository.findOneFilmByTitle(null);
@@ -49,7 +49,7 @@ class _04_TestFindOneFilmByTitle {
 
 	@Test
 	void testExistingTitleWithoutActors() {
-		DvdRentalJpaRepository repository = Factory.createDvdRentalJdbcRepository();
+		DvdRentalJpaRepository repository = Factory.createDvdRentalJpaRepository();
 		assertNotNull(repository);
 
 		Film expected = createTestFilm("Drumline Cyclone",

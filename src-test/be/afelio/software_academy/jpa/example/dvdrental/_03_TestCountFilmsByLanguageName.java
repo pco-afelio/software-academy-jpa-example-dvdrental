@@ -10,7 +10,7 @@ class _03_TestCountFilmsByLanguageName {
 
 	@Test
 	void testExistingLanguage() {
-		DvdRentalJpaRepository repository = Factory.createDvdRentalJdbcRepository();
+		DvdRentalJpaRepository repository = Factory.createDvdRentalJpaRepository();
 		assertNotNull(repository);
 
 		long expected = 1000L;
@@ -21,7 +21,7 @@ class _03_TestCountFilmsByLanguageName {
 
 	@Test
 	void testNonExistingLanguage() {
-		DvdRentalJpaRepository repository = Factory.createDvdRentalJdbcRepository();
+		DvdRentalJpaRepository repository = Factory.createDvdRentalJpaRepository();
 		assertNotNull(repository);
 
 		long expected = 0L;
@@ -32,7 +32,7 @@ class _03_TestCountFilmsByLanguageName {
 
 	@Test
 	void testNullLanguage() {
-		DvdRentalJpaRepository repository = Factory.createDvdRentalJdbcRepository();
+		DvdRentalJpaRepository repository = Factory.createDvdRentalJpaRepository();
 		assertNotNull(repository);
 
 		long expected = 0L;

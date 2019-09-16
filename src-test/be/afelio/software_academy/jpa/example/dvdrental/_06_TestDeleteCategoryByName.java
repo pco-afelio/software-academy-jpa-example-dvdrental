@@ -22,7 +22,7 @@ class _06_TestDeleteCategoryByName {
 		String categoryName = "Zoology";
 		String filmTitle = "Arachnophobia Rollercoaster";
 
-		DvdRentalJpaRepository repository = Factory.createDvdRentalJdbcRepository();
+		DvdRentalJpaRepository repository = Factory.createDvdRentalJpaRepository();
 		assertNotNull(repository);
 		try {
 			dvdRentalTestUtils.createCategoryForFilm(categoryName, filmTitle);
@@ -37,14 +37,14 @@ class _06_TestDeleteCategoryByName {
 
 	@Test
 	void testNonExistingCategoryName() {
-		DvdRentalJpaRepository repository = Factory.createDvdRentalJdbcRepository();
+		DvdRentalJpaRepository repository = Factory.createDvdRentalJpaRepository();
 		assertNotNull(repository);
 		assertFalse(repository.deleteCategoryByName("JeNeSuisPasDansLaDb"));
 	}
 
 	@Test
 	void testNullCategoryName() {
-		DvdRentalJpaRepository repository = Factory.createDvdRentalJdbcRepository();
+		DvdRentalJpaRepository repository = Factory.createDvdRentalJpaRepository();
 		assertNotNull(repository);
 		assertFalse(repository.deleteCategoryByName(null));
 	}

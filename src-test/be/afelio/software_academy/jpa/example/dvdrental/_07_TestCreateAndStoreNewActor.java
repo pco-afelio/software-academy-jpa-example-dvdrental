@@ -20,7 +20,7 @@ class _07_TestCreateAndStoreNewActor {
 
 	@Test
 	void testNotDuplicatedActor() {
-		DvdRentalJpaRepository repository = Factory.createDvdRentalJdbcRepository();
+		DvdRentalJpaRepository repository = Factory.createDvdRentalJpaRepository();
 		assertNotNull(repository);
 
 		try {
@@ -35,14 +35,14 @@ class _07_TestCreateAndStoreNewActor {
 
 	@Test
 	void testDuplicatedActor() {
-		DvdRentalJpaRepository repository = Factory.createDvdRentalJdbcRepository();
+		DvdRentalJpaRepository repository = Factory.createDvdRentalJpaRepository();
 		assertNotNull(repository);
 		assertThrows(DuplicatedActorException.class, () -> { repository.createAndStoreNewActor("Penelope", "Guiness"); });
 	}
 
 	@Test
 	void testBlankFirstname() {
-		DvdRentalJpaRepository repository = Factory.createDvdRentalJdbcRepository();
+		DvdRentalJpaRepository repository = Factory.createDvdRentalJpaRepository();
 		assertNotNull(repository);
 		try {
 			repository.createAndStoreNewActor("", "Boop");
@@ -56,7 +56,7 @@ class _07_TestCreateAndStoreNewActor {
 
 	@Test
 	void testBlankName() {
-		DvdRentalJpaRepository repository = Factory.createDvdRentalJdbcRepository();
+		DvdRentalJpaRepository repository = Factory.createDvdRentalJpaRepository();
 		assertNotNull(repository);
 		try {
 			repository.createAndStoreNewActor("Betty", "");
@@ -70,7 +70,7 @@ class _07_TestCreateAndStoreNewActor {
 
 	@Test
 	void testNullFirstname() {
-		DvdRentalJpaRepository repository = Factory.createDvdRentalJdbcRepository();
+		DvdRentalJpaRepository repository = Factory.createDvdRentalJpaRepository();
 		assertNotNull(repository);
 		try {
 			repository.createAndStoreNewActor(null, "Boop");
@@ -84,7 +84,7 @@ class _07_TestCreateAndStoreNewActor {
 
 	@Test
 	void testNullName() {
-		DvdRentalJpaRepository repository = Factory.createDvdRentalJdbcRepository();
+		DvdRentalJpaRepository repository = Factory.createDvdRentalJpaRepository();
 		assertNotNull(repository);
 		try {
 			repository.createAndStoreNewActor("Betty", null);

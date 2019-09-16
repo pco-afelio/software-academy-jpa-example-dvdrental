@@ -12,11 +12,12 @@ class _02_TestFindAllActorsByActorFirstNameIgnoreCase {
 
 	@Test
 	void testExistingFirstName() {
-		DvdRentalJpaRepository repository = Factory.createDvdRentalJdbcRepository();
+		DvdRentalJpaRepository repository = Factory.createDvdRentalJpaRepository();
 		assertNotNull(repository);
 
 		List<? extends Actor> expected = createActors();
-		List<? extends Actor> actual = repository.findAllActorsByActorFirstNameIgnoreCase("Christian");
+		List<? extends Actor> actual 
+			= repository.findAllActorsByActorFirstNameIgnoreCase("Christian");
 
 		assertNotNull(actual);
 		Collections.sort(actual, Comparator.comparing(a -> a.getLastname()));
@@ -26,11 +27,12 @@ class _02_TestFindAllActorsByActorFirstNameIgnoreCase {
 
 	@Test
 	void testExistingFirstNameCaseSensitive() {
-		DvdRentalJpaRepository repository = Factory.createDvdRentalJdbcRepository();
+		DvdRentalJpaRepository repository = Factory.createDvdRentalJpaRepository();
 		assertNotNull(repository);
 
 		List<? extends Actor> expected = createActors();
-		List<? extends Actor> actual = repository.findAllActorsByActorFirstNameIgnoreCase("cHrIsTiAn");
+		List<? extends Actor> actual 
+			= repository.findAllActorsByActorFirstNameIgnoreCase("cHrIsTiAn");
 
 		assertNotNull(actual);
 		Collections.sort(actual, Comparator.comparing(a -> a.getLastname()));
@@ -40,10 +42,11 @@ class _02_TestFindAllActorsByActorFirstNameIgnoreCase {
 
 	@Test
 	void testNonExistingFirstName() {
-		DvdRentalJpaRepository repository = Factory.createDvdRentalJdbcRepository();
+		DvdRentalJpaRepository repository = Factory.createDvdRentalJpaRepository();
 		assertNotNull(repository);
 
-		List<? extends Actor> actual = repository.findAllActorsByActorFirstNameIgnoreCase("xxx");
+		List<? extends Actor> actual 
+			= repository.findAllActorsByActorFirstNameIgnoreCase("xxx");
 
 		assertNotNull(actual);
 		assertEquals(0, actual.size());
@@ -51,10 +54,11 @@ class _02_TestFindAllActorsByActorFirstNameIgnoreCase {
 
 	@Test
 	void testNullFirstName() {
-		DvdRentalJpaRepository repository = Factory.createDvdRentalJdbcRepository();
+		DvdRentalJpaRepository repository = Factory.createDvdRentalJpaRepository();
 		assertNotNull(repository);
 
-		List<? extends Actor> actual = repository.findAllActorsByActorFirstNameIgnoreCase(null);
+		List<? extends Actor> actual 
+			= repository.findAllActorsByActorFirstNameIgnoreCase(null);
 
 		assertNotNull(actual);
 		assertEquals(0, actual.size());

@@ -25,7 +25,7 @@ class _05_TestUpdateStaffPasswordByEmail {
 
 	@Test
 	void testExistingEmail() {
-		DvdRentalJpaRepository repository = Factory.createDvdRentalJdbcRepository();
+		DvdRentalJpaRepository repository = Factory.createDvdRentalJpaRepository();
 		assertNotNull(repository);
 
 		String expected = String.valueOf(System.currentTimeMillis());
@@ -40,7 +40,7 @@ class _05_TestUpdateStaffPasswordByEmail {
 
 	@Test
 	void testNonExistingEmail() {
-		DvdRentalJpaRepository repository = Factory.createDvdRentalJdbcRepository();
+		DvdRentalJpaRepository repository = Factory.createDvdRentalJpaRepository();
 		assertNotNull(repository);
 
 		boolean updated = repository.updateStaffPasswordByEmail("je_n_existe_pas@nulle_part.com",
@@ -50,7 +50,7 @@ class _05_TestUpdateStaffPasswordByEmail {
 
 	@Test
 	void testNullEmail() {
-		DvdRentalJpaRepository repository = Factory.createDvdRentalJdbcRepository();
+		DvdRentalJpaRepository repository = Factory.createDvdRentalJpaRepository();
 		assertNotNull(repository);
 
 		boolean updated = repository.updateStaffPasswordByEmail(null, String.valueOf(System.currentTimeMillis()));
@@ -59,7 +59,7 @@ class _05_TestUpdateStaffPasswordByEmail {
 
 	@Test
 	void testNullPassword() {
-		DvdRentalJpaRepository repository = Factory.createDvdRentalJdbcRepository();
+		DvdRentalJpaRepository repository = Factory.createDvdRentalJpaRepository();
 		assertNotNull(repository);
 
 		String expected = dvdRentalTestUtils.findOneStaffPasswordByEmail("Jon.Stephens@sakilastaff.com");
@@ -74,7 +74,7 @@ class _05_TestUpdateStaffPasswordByEmail {
 
 	@Test
 	void testDuplicatePassword() {
-		DvdRentalJpaRepository repository = Factory.createDvdRentalJdbcRepository();
+		DvdRentalJpaRepository repository = Factory.createDvdRentalJpaRepository();
 		assertNotNull(repository);
 
 		String expected = dvdRentalTestUtils.findOneStaffPasswordByEmail("Jon.Stephens@sakilastaff.com");

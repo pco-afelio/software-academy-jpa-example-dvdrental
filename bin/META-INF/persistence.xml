@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.1">
+    
+	<persistence-unit name="jpa-dvdrental">
+
+	    <!-- Eclipselink -->
+		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+
+		<class>be.afelio.software_academy.jpa.example.dvdrental.entities.CustomerEntity</class>
+		<class>be.afelio.software_academy.jpa.example.dvdrental.entities.ActorEntity</class>
+		<class>be.afelio.software_academy.jpa.example.dvdrental.entities.LanguageEntity</class>
+		<class>be.afelio.software_academy.jpa.example.dvdrental.entities.FilmEntity</class>
+		
+		<properties>
+			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost/dvdrental"/>
+			<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+			<property name="javax.persistence.jdbc.user" value="postgres"/>
+			<property name="javax.persistence.jdbc.password" value="postgres"/>
+			<property name="eclipselink.logging.level" value="FINE"/>
+			
+		</properties>
+
+	</persistence-unit>
+	
+</persistence>

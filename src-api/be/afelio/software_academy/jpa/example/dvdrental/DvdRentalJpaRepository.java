@@ -9,7 +9,7 @@ import be.afelio.software_academy.jpa.example.dvdrental.exceptions.DuplicatedAct
 
 public interface DvdRentalJpaRepository {
 
-    Customer findOneCustomerEmailByCustomerFirstNameAndName(String firstName, String name);
+    Customer findOneCustomerByCustomerFirstNameAndName(String firstName, String name);
     List<? extends Actor> findAllActorsByActorFirstNameIgnoreCase(String firstName);
     Film findOneFilmByTitle(String title);
     long countFilmsByLanguageName(String languageName);

@@ -22,7 +22,7 @@ class _08_TestCreateAndStoreNewFilm {
 
 	@Test
 	void testNotDuplicatedFilmWithExistingLanguageAndExistingActorsAndValidParameters() {
-		DvdRentalJpaRepository repository = Factory.createDvdRentalJdbcRepository();
+		DvdRentalJpaRepository repository = Factory.createDvdRentalJpaRepository();
 		assertNotNull(repository);
 
 		String title = "Jdbc programming video";
@@ -57,7 +57,7 @@ class _08_TestCreateAndStoreNewFilm {
 
 	@Test
 	void testNotDuplicatedFilmWithExistingLanguageAndNotExistingActorsAndValidParameters() {
-		DvdRentalJpaRepository repository = Factory.createDvdRentalJdbcRepository();
+		DvdRentalJpaRepository repository = Factory.createDvdRentalJpaRepository();
 		assertNotNull(repository);
 
 		String title = "Jdbc programming video";
@@ -79,7 +79,7 @@ class _08_TestCreateAndStoreNewFilm {
 
 	@Test
 	void testNotDuplicatedFilmWithNotExistingLanguageAndExistingActorsAndValidParameters() {
-		DvdRentalJpaRepository repository = Factory.createDvdRentalJdbcRepository();
+		DvdRentalJpaRepository repository = Factory.createDvdRentalJpaRepository();
 		assertNotNull(repository);
 
 		String title = "Jdbc programming video";
@@ -115,7 +115,7 @@ class _08_TestCreateAndStoreNewFilm {
 
 	@Test
 	void testNotDuplicatedFilmWithExistingLanguageAndEmptyActorsListAndValidParameters() {
-		DvdRentalJpaRepository repository = Factory.createDvdRentalJdbcRepository();
+		DvdRentalJpaRepository repository = Factory.createDvdRentalJpaRepository();
 		assertNotNull(repository);
 
 		String title = "Jdbc programming video";
@@ -147,7 +147,7 @@ class _08_TestCreateAndStoreNewFilm {
 
 	@Test
 	void testNotDuplicatedFilmWithExistingLanguageAndNullActorsListAndValidParameters() {
-		DvdRentalJpaRepository repository = Factory.createDvdRentalJdbcRepository();
+		DvdRentalJpaRepository repository = Factory.createDvdRentalJpaRepository();
 		assertNotNull(repository);
 
 		String title = "Jdbc programming video";
@@ -180,7 +180,7 @@ class _08_TestCreateAndStoreNewFilm {
 
 	@Test
 	void testDuplicatedFilmWithExistingLanguageAndExistingActorsAndValidParameters() {
-		DvdRentalJpaRepository repository = Factory.createDvdRentalJdbcRepository();
+		DvdRentalJpaRepository repository = Factory.createDvdRentalJpaRepository();
 		assertNotNull(repository);
 
 		String title = "Jdbc programming video";
@@ -217,7 +217,7 @@ class _08_TestCreateAndStoreNewFilm {
 
 	@Test
 	void testInvalidTitle() {
-		DvdRentalJpaRepository repository = Factory.createDvdRentalJdbcRepository();
+		DvdRentalJpaRepository repository = Factory.createDvdRentalJpaRepository();
 		assertNotNull(repository);
 
 		String title = null;
@@ -239,7 +239,7 @@ class _08_TestCreateAndStoreNewFilm {
 
 	@Test
 	void testInvalidDescription() {
-		DvdRentalJpaRepository repository = Factory.createDvdRentalJdbcRepository();
+		DvdRentalJpaRepository repository = Factory.createDvdRentalJpaRepository();
 		assertNotNull(repository);
 
 		String title = "Jdbc programming video";
@@ -261,7 +261,7 @@ class _08_TestCreateAndStoreNewFilm {
 
 	@Test
 	void testInvalidReleaseYear() {
-		DvdRentalJpaRepository repository = Factory.createDvdRentalJdbcRepository();
+		DvdRentalJpaRepository repository = Factory.createDvdRentalJpaRepository();
 		assertNotNull(repository);
 
 		String title = "Jdbc programming video";
@@ -283,7 +283,7 @@ class _08_TestCreateAndStoreNewFilm {
 
 	@Test
 	void testInvalidLength() {
-		DvdRentalJpaRepository repository = Factory.createDvdRentalJdbcRepository();
+		DvdRentalJpaRepository repository = Factory.createDvdRentalJpaRepository();
 		assertNotNull(repository);
 
 		String title = "Jdbc programming video";

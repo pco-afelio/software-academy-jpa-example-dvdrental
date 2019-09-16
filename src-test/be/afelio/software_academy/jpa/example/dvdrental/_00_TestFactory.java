@@ -23,7 +23,7 @@ class _00_TestFactory {
 
 	@Test
 	void testRepositoryCreation() {
-		DvdRentalJpaRepository repository = Factory.createDvdRentalJdbcRepository();
+		DvdRentalJpaRepository repository = Factory.createDvdRentalJpaRepository();
 		assertNotNull(repository);
 	}
 }
