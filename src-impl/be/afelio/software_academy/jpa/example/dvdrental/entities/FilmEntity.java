@@ -1,5 +1,6 @@
 package be.afelio.software_academy.jpa.example.dvdrental.entities;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -72,6 +73,9 @@ public class FilmEntity extends Film {
 	}
 	
 	public List<ActorEntity> getActors() {
+		if (actors == null) {
+			actors = new ArrayList<>();
+		}
 		return actors;
 	}
 	
